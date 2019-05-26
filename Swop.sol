@@ -53,7 +53,7 @@ contract Swop {
         // poster = to;
         swopper = msg.sender;
         to.transfer(booking[to].amount);
-        // owner.send(getAdminfee(booking[poster].amount));
+        owner.send(getAdminfee(booking[poster].amount));
         emit swapBookingEvent(swopper, to, booking[to].amount);
     }
     
